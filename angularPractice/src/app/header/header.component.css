@@ -1,0 +1,16 @@
+nav{
+    background-color: skyblue;
+}
+nav img{
+    padding: 10px;
+}
+
+nav ul{
+    float: right;
+    list-style-type: none;
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px;
+}

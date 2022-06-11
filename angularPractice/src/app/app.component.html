@@ -1,0 +1,51 @@
+<app-header></app-header>
+<app-login></app-login>
+<app-todo [itemdata] = "data"></app-todo>
+<h1>HI I AM NEW TO ANGULAR</h1>
+<button (click)="getClick('nidhi','kumari')">Click me</button>
+<br><br>
+<input type="text" #name placeholder="Enter name">
+<button (click)="getValue(name.value)">Click here</button>
+
+<p>
+    hi my name is {{displayVal}}
+</p>
+
+
+<button (click)="Counter(false)">--</button>
+
+<p>{{count}}</p>
+<button (click)="Counter(true)">++</button>
+
+<h1 *ngIf="show; then showBlock else hideBlock"></h1>
+<ng-template #showBlock>heelo</ng-template>
+<ng-template #hideBlock> hideBlock </ng-template>
+
+<div [ngSwitch]="color">
+<p *ngSwitchCase="'red'">
+    yobyo
+</p>
+<p *ngSwitchCase="'green'">
+    yobyo
+</p>
+
+<p *ngSwitchCase="'blue'">
+  <h1 [style.color]="color">ddddddd</h1>
+ 
+<p *ngSwitchDefault style="color: red;">
+ default   yobyo
+</p>
+</div>
+
+<h3 *ngFor="let item of users">{{item}}</h3>
+
+<ul *ngFor="let deta of details">
+       <li>
+        {{deta.name}}
+        </li>
+        <ul *ngFor="let acc of deta.accounts">
+            {{acc}}
+        </ul>
+
+</ul>
+<button (click)="updateColor()" [style.color]="'color'" >update</button>

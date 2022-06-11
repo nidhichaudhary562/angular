@@ -1,0 +1,10 @@
+<p>todo works!</p>
+<h1>data from parent : {{itemdata}}</h1>
+<input name = "task"  placeholder="enter task" #task/>
+<button (click) ="addtask(task.value)">click</button>
+
+<ul *ngFor ="let item of list">
+	<li>{{item.name}}<button (click) = "remove(item.id)">Remove</button></li>
+</ul>
+<input name="dummy" #dummy />
+<button></button>

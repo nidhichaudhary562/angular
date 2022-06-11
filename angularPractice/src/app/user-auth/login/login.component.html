@@ -1,0 +1,22 @@
+<p>login works!</p>
+
+<form [formGroup]="loginForm" (ngSubmit) = "getvalue()">
+
+    <input type="text" name="username" placeholder="enter name here" formControlName="username"/>
+    <span *ngIf="username && username.invalid && username.touched" style="color: red;">This field is required</span>
+    <br>
+    <br>
+    <input type="text" name="email" placeholder="enter email here" formControlName="email"/>
+    <br>
+    <br>
+    <input type="password" name="password" placeholder="enter password here" formControlName="password">
+    <br>
+    <br>
+    <button [disabled]="loginForm.invalid">submit</button>
+</form>
+
+<ul>
+    <li>{{userdata.username}}</li>
+    <li>{{userdata.email}}</li>
+    <li>{{userdata.password}}</li>
+</ul>
